@@ -31,7 +31,6 @@ class Scraper
     learnco = Nokogiri::HTML(html)
     binding.pry
   end
-  end
 end
 
 #index_url = "./fixtures/student-site/index.html"
