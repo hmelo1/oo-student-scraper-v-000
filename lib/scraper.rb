@@ -43,8 +43,8 @@ class Scraper
         links[:blog] = social_media.attribute("href").value
       end
     end
-    links[:profile_quote] = learnco.css("div.profile-quote")
-    links[:bio] = learnco.css("div.bio-content div.description-holder").text
+    links[:profile_quote] = learnco.css("div.profile-quote").text
+    links[:bio] = learnco.css("div.bio-content div.description-holder").text.strip
     links
   end
 end
