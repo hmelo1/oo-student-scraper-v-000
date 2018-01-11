@@ -11,7 +11,7 @@ class Student
 
   def self.create_from_collection(students_array)
     #  def save
-    self.new(student_array).tap{|student| student.save}
+    self.new(students_array).tap{|student| student.save}
   end
 
   def save
