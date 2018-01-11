@@ -30,8 +30,8 @@ class Scraper
     html = File.read(profile_url)
     learnco = Nokogiri::HTML(html)
     links = {}
-    learnco.css("div.social-icon-container a").each do |social_media|
-      puts social_media.attribute("href").value
+    learnco.css("div.social-icon-container a").each_with_index do |social_media, index|
+      puts social_media.attribute("href").value + index
     end
   end
 end
