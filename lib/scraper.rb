@@ -36,7 +36,7 @@ class Scraper
       #url.gsub!(/^https?\:\/\/(www.)?/,'')
       #url.split('.')[-1]
       URI.parse(url).host
-      puts "#{url}"
+      puts "#{url.host}"
     elsif (url.include? "https://")
       url.gsub!(/^https?\:\/\//,'')
       puts "#{url}"
