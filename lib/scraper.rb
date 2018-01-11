@@ -42,8 +42,9 @@ class Scraper
       else
         links[:blog] = social_media.attribute("href").value
       end
-      puts links
     end
+    #links[:profile-quote] = learnco.css("div.vitals-text-container")
+    binding.pry
   end
 end
 
