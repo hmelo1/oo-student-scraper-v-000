@@ -31,7 +31,7 @@ class Scraper
     learnco = Nokogiri::HTML(html)
     links = {}
     learnco.css("div.social-icon-container a").each do |social_media|
-      put social_media.attribute("href").value
+      puts social_media.attribute("href").value
     end
   end
 end
