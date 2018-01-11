@@ -37,14 +37,14 @@ end
 #index_url = "./fixtures/student-site/index.html"
 #Scraper.scrape_index_page(index_url)
 
-#profile_url = "./fixtures/student-site/students/ryan-johnson.html"
-#Scraper.scrape_profile_page(profile_url)
+profile_url = "./fixtures/student-site/students/ryan-johnson.html"
+Scraper.scrape_profile_page(profile_url)
 
-test_url = "https://www.google.com/testing"
-test_url2 = "https://facebook.com/test"
+#test_url = "https://www.google.com/testing"
+#test_url2 = "https://facebook.com/test"
 
-Scraper.strip_url(test_url)
-Scraper.strip_url(test_url2)
+#Scraper.strip_url(test_url)
+#Scraper.strip_url(test_url2)
 
 #student.css("a").each do |link|
 # => puts test.attribute("href").value
