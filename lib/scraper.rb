@@ -33,7 +33,7 @@ class Scraper
 
   def self.strip_url(url)
     if (url.include? "https://www.")
-      url.gsub!(/https\:\/\/www./)
+      url.gsub!(/^https?\:\/\/(www.)?/,'')
       puts "#{url}"
     elsif (url.include? "https://")
       url.gsub!(/https\:\/\//)
