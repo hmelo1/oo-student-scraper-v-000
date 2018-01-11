@@ -50,7 +50,7 @@ end
 #index_url = "./fixtures/student-site/index.html"
 #Scraper.scrape_index_page(index_url)
 
-profile_url = "./fixtures/student-site/students/ryan-johnson.html"
+profile_url = "./fixtures/student-site/students/joe-burgess.html"
 Scraper.scrape_profile_page(profile_url)
 
 #test_url = "https://www.google.com/testing"
