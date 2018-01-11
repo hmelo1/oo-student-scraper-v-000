@@ -32,9 +32,9 @@ class Scraper
   end
 
   def self.strip_url(url)
-    if (url.include? "https://www.") do
+    if (url.include? "https://www.")
       url.sub!(/https\:\/\/www./)
-    elsif (url.include? "https://") do
+    elsif (url.include? "https://")
       url.sub!(/https\:\/\//)
     end
   end
