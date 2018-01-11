@@ -34,6 +34,7 @@ class Scraper
   def self.strip_url(url)
     if (url.include? "https://www.")
       url.gsub!(/^https?\:\/\/(www.)?/,'')
+      url.split('.com')[0]
       puts "#{url}"
     elsif (url.include? "https://")
       url.gsub!(/^https?\:\/\//,'')
@@ -48,8 +49,8 @@ end
 #profile_url = "./fixtures/student-site/students/ryan-johnson.html"
 #Scraper.scrape_profile_page(profile_url)
 
-test_url = "https://www.google.com"
-test_url2 = "https://facebook.com"
+test_url = "https://www.google.com/testing"
+test_url2 = "https://facebook.com/test"
 
 Scraper.strip_url(test_url)
 Scraper.strip_url(test_url2)
