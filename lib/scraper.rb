@@ -39,6 +39,8 @@ class Scraper
         links[:github] = social_media.attribute("href").value
       elsif social_media.attribute("href").value.include? "youtube"
         links[:youtube] = social_media.attribute("href").value
+      else
+        links[:blog] = social_media.attribute("href").value
       end
       puts links
     end
