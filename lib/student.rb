@@ -10,8 +10,7 @@ class Student
   end
 
   def self.create_from_collection(students_array)
-    #  def save
-    self.new(students_array).tap{|student| student.save}
+    students_array.each {|student_hash| self.new(student_hash)}
   end
 
   def save
