@@ -10,7 +10,12 @@ class Student
   end
 
   def self.create_from_collection(students_array)
+    #  def save
+    self.new(student_array).tap{|student| student.save}
+  end
 
+  def save
+    @@all << self
   end
 
   def add_student_attributes(attributes_hash)
