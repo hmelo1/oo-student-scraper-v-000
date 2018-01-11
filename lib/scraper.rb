@@ -36,7 +36,7 @@ class Scraper
       url.gsub!(/^https?\:\/\/(www.)?/,'')
       puts "#{url}"
     elsif (url.include? "https://")
-      url.gsub!(/https\:\/\//)
+      url.gsub!(/^https?\:\/\//,'')
       puts "#{url}"
     end
   end
