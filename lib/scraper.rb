@@ -33,6 +33,7 @@ class Scraper
     learnco.css("div.social-icon-container a").each_with_index do |social_media, index|
       if social_media.attribute("href").value.include? "twitter"
         puts "TWITTER!"
+        links[:twitter] = social_media.attribute("href").value
       end
     end
   end
