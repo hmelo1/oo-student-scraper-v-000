@@ -31,7 +31,9 @@ class Scraper
     learnco = Nokogiri::HTML(html)
     binding.pry
     learnco.css("div.social-icon-container a").each do |social_media|
+      social_media.each do |link|
 
+      end
     end
   end
 end
