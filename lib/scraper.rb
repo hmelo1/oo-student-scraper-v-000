@@ -31,8 +31,9 @@ class Scraper
     learnco = Nokogiri::HTML(html)
     links = {}
     learnco.css("div.social-icon-container a").each_with_index do |social_media, index|
-      puts index
-      puts social_media.attribute("href").value
+      if social_media.attribute("href").value.include? "twitter"
+
+      end
     end
   end
 end
