@@ -30,17 +30,17 @@ class Scraper
     html = File.read(profile_url)
     learnco = Nokogiri::HTML(html)
     links = {}
-    learnco.css("div.social-icon-container").each_with_index do |social_media, index|
-      if social_media.css("a").attribute("href").value.include? "twitter"
-        links[:twitter] = social_media.css("a").attribute("href").value
-      elsif social_media.css("a").attribute("href").value.include? "linkedin"
-        links[:linkedin] = social_media.css("a").attribute("href").value
-      elsif social_media.css("a").attribute("href").value.include? "github"
-        links[:github] = social_media.css("a").attribute("href").value
-      elsif social_media.css("a").attribute("href").value.include? "youtube"
-        links[:youtube] = social_media.css("a").attribute("href").value
+    learnco.css("div.social-icon-container a").each_with_index do |social_media, index|
+      if social_media.attribute("href").value.include? "twitter"
+        links[:twitter] = social_media.attribute("href").value
+      elsif social_media.attribute("href").value.include? "linkedin"
+        links[:linkedin] = social_media.attribute("href").value
+      elsif social_media.attribute("href").value.include? "github"
+        links[:github] = social_media.attribute("href").value
+      elsif social_media.attribute("href").value.include? "youtube"
+        links[:youtube] = social_media.attribute("href").value
       else
-        links[:blog] = social_media.css("a").attribute("href").value
+        links[:blog] = social_media.attribute("href").value
       end
       puts links
     end
