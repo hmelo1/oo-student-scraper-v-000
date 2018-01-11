@@ -54,8 +54,6 @@ test_url2 = "https://facebook.com"
 Scraper.strip_url(test_url)
 Scraper.strip_url(test_url2)
 
-puts test_url
-puts test_url2
 #student.css("a").each do |link|
 # => puts test.attribute("href").value
 #end
