@@ -29,18 +29,8 @@ class Scraper
 #
     html = File.read(profile_url)
     learnco = Nokogiri::HTML(html)
+    binding.pry
   end
-
-  def self.strip_url(url)
-    if (url.include? "https://www.")
-      #url.gsub!(/^https?\:\/\/(www.)?/,'')
-      #url.split('.')[-1]
-      URI.parse(url).host
-      puts "#{url.host}"
-    elsif (url.include? "https://")
-      url.gsub!(/^https?\:\/\//,'')
-      puts "#{url}"
-    end
   end
 end
 
