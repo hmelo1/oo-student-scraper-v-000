@@ -43,7 +43,7 @@ class Scraper
         links[:blog] = social_media.attribute("href").value
       end
     end
-    #links[:profile-quote] = learnco.css("div.vitals-text-container")
+    #links[:profile-quote] = learnco.css("div.profile-quote")
     binding.pry
   end
 end
