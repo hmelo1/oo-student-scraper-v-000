@@ -45,7 +45,7 @@ class Scraper
     end
     links[:profile_quote] = learnco.css("div.profile-quote")
     links[:bio] = learnco.css("div.bio-content div.description-holder").text
-    puts links
+    links
   end
 end
 
