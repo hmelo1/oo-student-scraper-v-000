@@ -29,7 +29,6 @@ class Scraper
 #
     html = File.read(profile_url)
     learnco = Nokogiri::HTML(html)
-    binding.pry
   end
 
   def self.strip_url(url)
@@ -41,9 +40,14 @@ end
 #index_url = "./fixtures/student-site/index.html"
 #Scraper.scrape_index_page(index_url)
 
-profile_url = "./fixtures/student-site/students/ryan-johnson.html"
-Scraper.scrape_profile_page(profile_url)
+#profile_url = "./fixtures/student-site/students/ryan-johnson.html"
+#Scraper.scrape_profile_page(profile_url)
 
+test_url = "https://www.google.com"
+test_url2 = "https://facebook.com"
+
+Scraper.strip_url(test_url)
+Scraper.strip_url(test_url2)
 #student.css("a").each do |link|
 # => puts test.attribute("href").value
 #end
