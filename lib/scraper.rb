@@ -34,6 +34,7 @@ class Scraper
       if social_media.attribute("href").value.include? "twitter"
         puts "TWITTER!"
         links[:twitter] = social_media.attribute("href").value
+        puts links
       end
     end
   end
