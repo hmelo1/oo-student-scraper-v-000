@@ -13,10 +13,6 @@ class Student
     students_array.each {|student_hash| self.new(student_hash)}
   end
 
-  def save
-    @@all << self
-  end
-
   def add_student_attributes(attributes_hash)
 
   end
